@@ -13,7 +13,7 @@ MAINTAINER Seán C McCord "ulexus@gmail.com"
 # Expose the ceph OSD port (6800+, by default)
 EXPOSE 6800
 
-RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai
+RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN apt-get update && apt-get -y install runit && \
 apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
